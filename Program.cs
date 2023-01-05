@@ -60,7 +60,7 @@ public class CaseReproduction : IDisposable
     }
 
     [Fact]
-    public async Task ApplyDiscountToCoconut_UsingAssignmentOperator_ThrowsRetryLimitExceededExceptionException()
+    public async Task ApplyDiscountToCoconut_UsingAssignmentOperator_ThrowsRetryLimitExceededException()
     {
         await Assert.ThrowsAsync<RetryLimitExceededException>(() => ApplyDiscountToCoconut(coconut => coconut.Price = 8));
     }
